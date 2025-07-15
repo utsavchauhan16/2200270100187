@@ -25,7 +25,7 @@ public class LoggingFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
 
-        String logMessage = String.format("Log(stack=UrlShortener, level=INFO, package=%s, message=%s %s)",
+        String logMessage = String.format("Log(stack=backend, level=INFO, package=%s, message=%s %s)",
                 request.getRequestURI(), request.getMethod(), request.getRequestURL());
 
         String token = tokenService.getValidToken();
